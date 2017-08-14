@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>data</title>
+	<script src="js/vue.js"></script>
+</head>
+<body>
+	<div id="div1">
+		<ul>
+			<li v-for="(index,text) in arr">{{text}} {{index}}</li>
+			<li></li>
+			<li v-for="(text,index) in arr">{{text}} {{index}}</li>
+		</ul>
+		<ul>
+			<li v-for="(value,index) in json">
+				{{index+1}} {{value.a}} 
+				{{value.b}}
+				{{value.c}}
+			</li>
+		</ul>
+	</div>
+<script>
+	var input1 = new Vue({
+		el: '#div1',
+		data: {
+			arr: ['When','you','fall','down'],
+			json: [{a:"you",b:"just",c:"gotta"},{a:"you",b:"just",c:"gotta"},{a:"you",b:"just",c:"gotta"},{a:"you",b:"just",c:"gotta"}]
+		}
+	})
+</script>
+</body>
+</html>

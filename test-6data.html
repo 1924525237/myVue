@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>data</title>
+	<script src="js/vue.js"></script>
+</head>
+<body>
+	<div id="block1">
+		<input type="text" v-model="msg">
+		<input type="text" v-model="msg">
+		{{msg}}
+		<br />
+		{{msg2}}
+		<br />
+		{{arr}}
+		<br />
+		{{msg3}}
+		<br />
+		{{json}}
+	</div>
+	
+<script>
+	var input1 = new Vue({
+		el: '#block1',
+		data: {
+			msg: 'Hello, Vue!',
+			msg2: 123345,
+			arr: ['When','you','fall','down'],
+			msg3: true,
+			json: {a:"you",b:"just",c:"gotta"}
+		}
+	})
+</script>
+</body>
+</html>
