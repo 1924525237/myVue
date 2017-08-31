@@ -1,0 +1,22 @@
+{
+  "name": "myvue",
+  "version": "1.0.0",
+  "description": "vue project test",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haolic/myVue.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/haolic/myVue/issues"
+  },
+  "homepage": "https://github.com/haolic/myVue#readme"
+}
