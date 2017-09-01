@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>生命周期</title>
+</head>
+<body>
+    <div id="example">
+        <p>
+            {{a}}
+        </p>
+        <button v-on:click="change()">点击更改</button>
+    </div>
+    <script src="./node_modules/vue/dist/vue.min.js"></script>
+    <script>
+        let i = 1;
+        let vm = new Vue({
+            el: '#example',
+            data: {
+                a: 1
+            },
+            methods: {
+                change: () => {
+                    vm.a = ++i;
+                }
+            },
+            created: function () {//不能用箭头函数,箭头函数中this是父级;
+                console.log('a is: ' + this.a);
+                alert('实例被创建完毕了');
+            },
+            updated: function () {
+                console.log('a is changed to :' + this.a);
+            }
+        }) 
+    </script>
+</body>
+</html>
