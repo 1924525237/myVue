@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>两个指令缩写</title>
+</head>
+<body>
+    <div id="ex">
+        <a :href='url'>点击去百度</a>
+        <button @click='goBaidu'>点击去百度</button>
+    </div>
+
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script>
+    let vm = new Vue({
+        el: '#ex',
+        data: {
+            url: 'hahaha.html'
+        },
+        methods: {
+            goBaidu: () => {
+                location.href = 'hahaha.html'
+            }
+        }
+    })
+</script>
+</body>
+</html>

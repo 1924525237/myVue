@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>v-bind</title>
+    <style>
+        button{
+            border-radius: 4px;
+            border: 0;
+            background: #f90;
+            width: 100px;
+            height: 30px;
+            outline: none;
+        }
+        button:active{
+            background: #a50;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <img v-bind:src='images + num + type'>
+        <button v-on:click="changeImg">轮换图片</button>
+    </div>
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script>
+    let i=1;
+    let vm = new Vue({
+        el: '#div1',
+        data: {
+            images: 'images/',
+            num: '1',
+            type: '.jpg'
+        },
+        methods: {
+            changeImg: function(){
+                i++;
+                if (i == 6) {
+                    i=1;
+                }
+                this.num = i;
+            }
+        }
+    })
+</script>
+</body>
+</html>
