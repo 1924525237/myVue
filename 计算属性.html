@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">
+        <p>文字源:{{msg}}</p>
+        <p>逆序文字:{{remsg}}</p>
+    </div>
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script>
+    let vm = new Vue({
+        el: '#div1',
+        data: {
+            msg: 'Actions speak louder than words!'
+        },
+        computed: {
+            remsg: function() {
+                return this.msg.split('').reverse().join('');
+            }
+        }
+    })
+    console.log(vm.remsg);
+    vm.msg = 'Study hard every day';
+    console.log(vm.remsg);
+</script>
+</body>
+</html>
