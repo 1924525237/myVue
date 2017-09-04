@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            background: #000;
+            height: 200px;
+            width: 200px;
+            margin: 0 auto;
+        }
+        .ha{
+            background: #f00;
+        }
+        .hei{
+            background: #ff0;
+        }
+        .hahei{
+            background: #0f0;
+        }
+        button{
+            margin-right: 15px;
+            border: none;
+            border-radius: 4px;
+            margin-top: 15px;
+        }
+        #red{
+            background: #f00;
+        }
+        #green{
+            background: #0f0;
+        }
+        #yellow{
+            background: #ff0;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <div v-bind:class="classObject"></div>
+        <button @click="red" id="red">红色</button>
+        <button @click="green" id="green">绿色</button>
+        <button @click="yellow" id="yellow">黄色</button>
+    </div>
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script>
+    let vm = new Vue({
+        el: '#div1',
+        data:{
+            classObject: {
+                ha: false,
+                hei: false,
+                hahei: false
+            }
+        },
+        methods: {
+            red: function(){
+                this.classObject.ha = true;
+                this.classObject.hahei = false;
+                this.classObject.hei = false;
+            },
+            green: function(){
+                this.classObject.hahei = true;
+                this.classObject.ha = false;
+                this.classObject.hei = false;
+            },
+            yellow: function(){
+                this.classObject.hei = true;
+                this.classObject.hahei = false;
+                this.classObject.ha = false;
+            }
+        }
+    })
+</script>
+</body>
+</html>
