@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="div1">
+		<h1 v-if="ok">yes</h1>
+		<h1 v-else>no</h1>
+		<button @click="change">点击</button>
+	</div>
+	<script>
+		let vm = new Vue({
+			el: "#div1",
+			data: {
+				ok: true
+			},
+			methods: {
+				change: function(){
+					if(this.ok) {
+						this.ok = false;
+					}else{
+						this.ok = true;
+					}
+				}
+			}
+		})
+	</script>
+</body>
+</html>

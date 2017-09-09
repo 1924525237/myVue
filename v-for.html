@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<div id="div1">
+	<ul>
+		<li v-for="item in arr">
+			{{item.num}}
+		</li>
+	</ul>
+	<button @click="change">点击更换</button>
+</div>
+
+	<script type="text/javascript" src="node_modules/vue/dist/vue.js"></script>
+	<script type="text/javascript">
+		let vm = new Vue({
+			el: "#div1",
+			data: {
+				arr: [{num: "一"},{num: "二"},{num: "三"},{num: "四"}]
+			},
+			methods: {
+				change(){
+					this.arr = [{num: "四"},{num: "三"},{num: "二"},{num: "一"}]
+				}
+			}
+		})
+	</script>
+</body>
+</html>

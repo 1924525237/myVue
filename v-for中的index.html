@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<div id="div1">
+	<ul>
+		<li v-for="(value, index) in arr">{{pMsg}}-{{value.msg}}-{{index}}</li>
+	</ul>
+</div>
+	<script type="text/javascript" src="node_modules/vue/dist/vue.js"></script>
+	<script>
+		let vm = new Vue({
+			el: "#div1",
+			data: {
+				pMsg: 'Actions speak louder than words!',
+				arr: [{msg: 'success'},{msg: 'success-1'},{msg: 'success-2'},{msg: 'success-3'}]
+			}
+		})
+	</script>
+</body>
+</html>

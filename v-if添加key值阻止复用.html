@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="div1">
+		<div v-if="loginType === 'username'">
+			<label>userName:</label><br>
+			<input type="text" placeholder="用户名" key='1'>
+		</div>
+		<div v-else>
+			<label>Email:</label><br>
+			<input type="text" placeholder="邮箱" key='2'>
+		</div>
+		<button @click="change">点击切换登陆方式</button>
+	</div>
+	<script src="node_modules/vue/dist/vue.js"></script>
+	<script type="text/javascript">
+        let vm;
+        vm = new Vue({
+            el: "#div1",
+            data: {
+                loginType: 'username'
+            },
+            methods: {
+                change() {
+                    if (this.loginType) {
+                        this.loginType = '';
+                    } else {
+                        this.loginType = 'username'
+                    }
+                }
+            }
+        });
+	</script>
+</body>
+</html>
