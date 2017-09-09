@@ -8,20 +8,18 @@
     <title>Document</title>
 </head>
 <body>
-<div id="div1">
-    <ul>
-        <li v-for="(value, index) in obj">{{index}}-{{value}}</li>
-    </ul>
-</div>
-<script src="./node_modules/vue/dist/vue.js"></script>
+    <div id="div1">
+        <button @click="say('哈哈')">点击说哈哈</button>
+        <button @click="say('嘿嘿')">点击说嘿嘿</button>
+    </div>
+
+<script src="node_modules/vue/dist/vue.js"></script>
 <script>
     let vm = new Vue({
         el: '#div1',
-        data: {
-            obj: {
-                name: 'tom',
-                age: 19,
-                sex: "男"
+        methods: {
+            say(msg) {
+                alert(msg);
             }
         }
     })

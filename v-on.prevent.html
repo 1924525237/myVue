@@ -6,24 +6,19 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="./node_modules/vue/dist/vue.js"></script>
+
 </head>
 <body>
 <div id="div1">
-    <ul>
-        <li v-for="(value, index) in obj">{{index}}-{{value}}</li>
-    </ul>
+    <form action="#">
+        <input type="submit" value="提交" @click.prevent>
+    </form>
 </div>
-<script src="./node_modules/vue/dist/vue.js"></script>
 <script>
     let vm = new Vue({
-        el: '#div1',
-        data: {
-            obj: {
-                name: 'tom',
-                age: 19,
-                sex: "男"
-            }
-        }
+        el: '#div1'
+
     })
 </script>
 </body>

@@ -9,19 +9,16 @@
 </head>
 <body>
 <div id="div1">
-    <ul>
-        <li v-for="(value, index) in obj">{{index}}-{{value}}</li>
-    </ul>
+    <button @click="say('哈哈哈哈哈哈哈', $event)">点击说哈哈哈哈哈哈哈</button>
 </div>
 <script src="./node_modules/vue/dist/vue.js"></script>
 <script>
     let vm = new Vue({
-        el: '#div1',
-        data: {
-            obj: {
-                name: 'tom',
-                age: 19,
-                sex: "男"
+        el: "#div1",
+        methods: {
+            say (msg) {
+                alert(msg);
+                console.log(event);
             }
         }
     })

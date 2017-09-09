@@ -9,20 +9,15 @@
 </head>
 <body>
 <div id="div1">
-    <ul>
-        <li v-for="(value, index) in obj">{{index}}-{{value}}</li>
-    </ul>
+    <button @click="count += 1">计数</button>
+    <p>按钮被点击了{{count}}次</p>
 </div>
 <script src="./node_modules/vue/dist/vue.js"></script>
 <script>
     let vm = new Vue({
         el: '#div1',
         data: {
-            obj: {
-                name: 'tom',
-                age: 19,
-                sex: "男"
-            }
+            count: 0
         }
     })
 </script>
