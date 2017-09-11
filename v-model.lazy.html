@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>v-model.lazy</title>
+	<script type="text/javascript" src="node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="div1">
+		<!-- 加入.lazy修饰符,则数据会在input触发onblur事件时同步. -->
+		<input type="text" v-model.lazy="msg">
+		<div>{{msg}}</div>
+	</div>
+	<script type="text/javascript">
+		let vm = new Vue({
+			el: '#div1',
+			data: {
+				msg: '我是输入的值'
+			}
+		})
+	</script>
+</body>
+</html>

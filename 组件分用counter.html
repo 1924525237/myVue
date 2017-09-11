@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>组件分用counter</title>
+</head>
+<body>
+	<div id="div1">
+		<co-me></co-me>
+		<co-me></co-me>
+		<co-me></co-me>
+	</div>
+<script type="text/javascript" src="node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+	Vue.component('co-me', {
+		template: '<button @click="counter += 1">{{ counter }}</button>',
+		data: function() {
+			return {
+				counter: 0
+			}
+		}
+	})
+	let vm = new Vue({
+		el: '#div1',
+	})
+</script>
+</body>
+</html>

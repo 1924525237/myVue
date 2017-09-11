@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="div1">
+		<my-accept></my-accept>
+	</div>
+	<script type="text/javascript" src="node_modules/vue/dist/vue.js"></script>
+	<script type="text/javascript">
+		Vue.component('my-accept', {
+			template: '<div>Actions speak louder than words!</div>'
+		})
+		new Vue({
+			el: '#div1'
+		})
+	</script>
+</body>
+</html>

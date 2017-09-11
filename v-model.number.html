@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="node_modules/vue/dist/vue.js"></script>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<div id="div1">
+		<input type="text" v-model.number="msg">
+	</div>
+	<script type="text/javascript">
+		let vm = new Vue({
+			el: '#div1',
+			data: {
+				msg: 'Actions speak louder than words!'
+			}
+		})
+	</script>
+</body>
+</html>
