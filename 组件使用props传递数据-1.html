@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>props</title>
+</head>
+<body>
+	<div id="div1">
+		<child message="hello!"></child>
+	</div>
+	
+	<script type="text/javascript" src="node_modules/vue/dist/vue.js"></script>
+	<script type="text/javascript">
+		Vue.component('child', {
+			props: ['message'],
+			template: '<span>{{message}}</span>'
+		})
+		let vm = new Vue({
+			el: '#div1'
+		})
+	</script>
+</body>
+</html>
